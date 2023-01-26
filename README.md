@@ -38,11 +38,11 @@ Venus is still in progress. `Alpha v1.0` will be out soon.
 
 ## Credits
 List of contriubutors:
-- [Rikard Johansson](rikard01j@gmail.com)
-- [Noel Tesfalidet](eog582@gmail.com)
-- [Pim Erlandsson](pim.erlandsson@gmail.com)
-- [Arvid Holm](arvid.t.holm@gmail.com)
-- [Samson Emblad](samson@emblad.com)
+- [Rikard Johansson](https://github.com/ItsRkaj)
+- [Noel Tesfalidet](https://github.com/NoelMT)
+- [Pim Erlandsson](https://github.com/pimerlandsson)
+- [Arvid Holm](https://github.com/arvhol)
+- [Samson Emblad](https://github.com/samsonsin)
 
 ## License
 TBA
