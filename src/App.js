@@ -1,23 +1,20 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import React, { useState } from "react";
+import Day from "./components/Day";
+import Week from "./components/Week";
+import Month from "./components/Month";
 
 function App() {
+  const [showComponent, setShowComponent] = useState("Day");
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Project <b>Venus</b>
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      {showComponent === "Day" ? <Day /> : null}
+      {showComponent === "Week" ? <Week /> : null}
+      {showComponent === "Month" ? <Month /> : null}
+      <button onClick={() => setShowComponent("Day")}>Day</button>
+      <button onClick={() => setShowComponent("Week")}>Week</button>
+      <button onClick={() => setShowComponent("Month")}>Month</button>
     </div>
   );
 }
