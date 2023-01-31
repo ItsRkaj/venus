@@ -16,7 +16,7 @@ export default function Deposits() {
       </Typography>
       <Typography color="text.secondary" sx={{ flex: 1 }}>
         {new Date().getHours()}:{new Date().getMinutes()},{" "}
-        {new Date().getDate()}/{new Date().getDay()}-{new Date().getFullYear()}
+        {new Date().getDate()}/{new Date().getDay() + 1}-{new Date().getFullYear()}
       </Typography>
       <div>
         <Link color="primary" href="#" onClick={preventDefault}>
