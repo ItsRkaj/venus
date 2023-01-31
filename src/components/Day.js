@@ -1,46 +1,32 @@
-import React, { useEffect, useRef } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import Chart from "chart.js/auto";
+import { csv } from "d3";
 
 const Week = () => {
   const chartContainer = useRef(null);
 
+  const [data, setData] = useState(
+    JSON.parse(localStorage.getItem("chartData")) || []
+  );
+
+  useEffect(() => {
+    csv("test.csv").then((data) => {
+      setData(data);
+      localStorage.setItem("chartData", JSON.stringify(data));
+    });
+  }, []);
+
   useEffect(() => {
     const chart = new Chart(chartContainer.current, {
-      type: "bar",
+      type: "line",
       data: {
-        labels: [
-          "00",
-          "01",
-          "02",
-          "03",
-          "04",
-          "05",
-          "06",
-          "07",
-          "08",
-          "09",
-          "10",
-          "11",
-          "12",
-          "13",
-          "14",
-          "15",
-          "16",
-          "17",
-          "18",
-          "19",
-          "20",
-          "21",
-          "22",
-          "23",
-        ],
+        labels: data.filter((d) => d.day !== "").map((d) => d.day),
         datasets: [
           {
             label: "# Electricity consumption today",
-            data: [
-              1, 2, 3, 5, 2, 3, 9, 19, 23, 25, 20, 29, 29, 19, 13, 15, 20, 13,
-              9, 2, 3, 5, 2, 3,
-            ],
+            data: data
+              .filter((d) => d.consumtion_day !== "")
+              .map((d) => d.consumtion_day),
             borderWidth: 1,
           },
         ],
@@ -56,7 +42,7 @@ const Week = () => {
     return () => {
       chart.destroy();
     };
-  }, []);
+  }, [data]);
 
   return <canvas ref={chartContainer} />;
 };
