@@ -20,6 +20,7 @@ import ChevronLeftIcon from "@mui/icons-material/ChevronLeft";
 import { mainListItems } from "./listItems";
 import Deposits from "./Deposits";
 import Orders from "./Orders";
+import Adapters from "./Adapters";
 import Day from "../Day";
 import Week from "../Week";
 import Month from "../Month";
@@ -241,6 +242,11 @@ function DashboardContent() {
                   <Month />
                 </Paper>
               </Grid>
+            </Grid>
+            <Grid item xs={12}>
+              <Paper sx={{ mt: 4, p: 2, display: "flex", flexDirection: "column" }}>
+                <Adapters />
+              </Paper>
             </Grid>
           </Container>
           <Container maxWidth="" sx={{ mt: 4, mb: 4 }}>
