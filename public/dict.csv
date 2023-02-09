@@ -1,0 +1,38 @@
+entity_id,name
+sensor.energysocket_3c39e72e0fb0_active_power,HomeWizard Energy Socket Dishwasher (offline)
+sensor.energysocket_3c39e72e0fb0_active_power_l1,HomeWizard Energy Socket Dishwasher (offline)
+sensor.energysocket_3c39e72e0fb0_total_power_import_t1,HomeWizard Energy Socket Dishwasher (offline)
+sensor.energysocket_3c39e72e2972_active_power,HomeWizard Energy Socket Boiler
+sensor.energysocket_3c39e72e2972_active_power_l1,HomeWizard Energy Socket Boiler
+sensor.energysocket_3c39e72e2972_total_power_import_t1,HomeWizard Energy Socket Boiler
+sensor.energysocket_3c39e72e428e_active_power,HomeWizard Energy socket AC
+sensor.energysocket_3c39e72e428e_active_power_l1,HomeWizard Energy socket AC
+sensor.energysocket_3c39e72e428e_total_power_import_t1,HomeWizard Energy socket AC
+sensor.shellyplug_s_4022d8894f0c_power,Shelly Plug S 1 microwave
+sensor.shellyplug_s_4022d8894f0c_energy,Shelly Plug S 1 microwave
+sensor.shellyplug_s_4022d88949dd_power,Shelly Plug S 2 fridge
+sensor.shellyplug_s_4022d88949dd_energy,Shelly Plug S 2 fridge
+sensor.shellyplug_s_4022d887120c_power,Shelly Plug S 3 nespresso
+sensor.shellyplug_s_4022d887120c_energy,Shelly Plug S 3 nespresso
+sensor.shellyplug_s_3ce90ec7e0f9_power,Shelly Plug S 4 Ipad
+sensor.shellyplug_s_3ce90ec7e0f9_energy,Shelly Plug S 4 Ipad
+sensor.shellyplug_s_c8c9a3a4d99e_power,Shelly Plug S 5 toy tesla car
+sensor.shellyplug_s_c8c9a3a4d99e_energy,Shelly Plug S 5 toy tesla car
+sensor.shellyplug_s_3ce90ec815ef_power,Shelly Plug S 6 water boiler
+sensor.shellyplug_s_3ce90ec815ef_energy,Shelly Plug S 6 water boiler
+sensor.shellyplug_s_3ce90ec7df3c_power,Shelly Plug S 7 TV
+sensor.shellyplug_s_3ce90ec7df3c_energy,Shelly Plug S 7 TV
+sensor.shellyplug_s_c8c9a3aaf53f_power,Shelly Plug S 8 Nest
+sensor.shellyplug_s_c8c9a3aaf53f_energy,Shelly Plug S 8 Nest
+sensor.shellyplug_s_c8c9a3a4d78b_power,Shelly Plug S 9 Google speaker
+sensor.shellyplug_s_c8c9a3a4d78b_energy,Shelly Plug S 9 Google speaker
+sensor.shellyplug_s_c8c9a3a512bc_power,Shelly Plug S 10 Alexa
+sensor.shellyplug_s_c8c9a3a512bc_energy,Shelly Plug S 10 Alexa
+sensor.shellyplug_s_c8c9a3a55e01_power,Shelly Plug S 11 Dataladdare
+sensor.shellyplug_s_c8c9a3a55e01_energy,Shelly Plug S 11 Dataladdare
+sensor.shellyplug_s_c8c9a3aaf74a_power,Shelly Plug S 12 TV Screen
+sensor.shellyplug_s_c8c9a3aaf74a_energy,Shelly Plug S 12 TV Screen
+sensor.shellyplug_s_c8c9a3a5f2fd_power,Shelly Plug S 13 Dishwasher
+sensor.shellyplug_s_c8c9a3a5f2fd_energy,Shelly Plug S 13 Dishwasher
+sensor.shellyplug_c1c2d3_power,Shelly plug E 14 Dishwasher
+sensor.shellyplug_c1c2d3_energy,Shelly plug E 14 Dishwasher

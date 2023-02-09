@@ -20,6 +20,7 @@ import ChevronLeftIcon from "@mui/icons-material/ChevronLeft";
 import { mainListItems } from "./listItems";
 import Deposits from "./Deposits";
 import Orders from "./Orders";
+import Adapters from "./Adapters";
 import Day from "../Day";
 import Week from "../Week";
 import Month from "../Month";
@@ -162,8 +163,8 @@ function DashboardContent() {
           <Toolbar />
           <Container maxWidth="lg" sx={{ mt: 4, mb: 4 }}>
             <Grid container spacing={3}>
-              {/* Chart */}
-              <Grid item xs={12} md={8} lg={9}>
+              {/* Main Chart */}
+              <Grid item xs={12} md={8} lg={8}>
                 <Paper
                   sx={{
                     p: 2,
@@ -177,7 +178,7 @@ function DashboardContent() {
                 </Paper>
               </Grid>
               {/* Recent Deposits */}
-              <Grid item xs={12} md={4} lg={3}>
+              <Grid item xs={12} md={4} lg={4}>
                 <Paper
                   sx={{
                     p: 2,
@@ -207,12 +208,53 @@ function DashboardContent() {
                   </ButtonGroup>
                 </Paper>
               </Grid>
-              {/* Recent Orders */}
-              <Grid item xs={12}>
-                <Paper sx={{ p: 2, display: "flex", flexDirection: "column" }}>
-                  <Orders />
+              {/* Chart */}
+              <Grid item sm={12} md={4}>
+                <Paper
+                  sx={{
+                    p: 2,
+                    display: "flex",
+                    flexDirection: "column",
+                  }}
+                >
+                  <Day />
                 </Paper>
               </Grid>
+              <Grid item sm={12} md={4}>
+                <Paper
+                  sx={{
+                    p: 2,
+                    display: "flex",
+                    flexDirection: "column",
+                  }}
+                >
+                  <Week />
+                </Paper>
+              </Grid>
+              <Grid item sm={12} md={4}>
+                <Paper
+                  sx={{
+                    p: 2,
+                    display: "flex",
+                    flexDirection: "column",
+                  }}
+                >
+                  <Month />
+                </Paper>
+              </Grid>
+            </Grid>
+            <Grid item xs={12}>
+              <Paper sx={{ mt: 4, p: 2, display: "flex", flexDirection: "column" }}>
+                <Adapters />
+              </Paper>
+            </Grid>
+          </Container>
+          <Container maxWidth="" sx={{ mt: 4, mb: 4 }}>
+            {/* Recent Orders */}
+            <Grid item xs={12}>
+              <Paper sx={{ p: 2, display: "flex", flexDirection: "column" }}>
+                <Orders />
+              </Paper>
             </Grid>
             <Copyright sx={{ pt: 4 }} />
           </Container>
