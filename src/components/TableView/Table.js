@@ -4,10 +4,10 @@ import TableBody from "@mui/material/TableBody";
 import TableCell from "@mui/material/TableCell";
 import TableHead from "@mui/material/TableHead";
 import TableRow from "@mui/material/TableRow";
-import Title from "./Title";
+import Title from "../General/Title";
 import { csv } from "d3";
 
-export default function Orders() {
+export default function DataTable() {
 
   const [data, setData] = useState(
     JSON.parse(localStorage.getItem("tableData")) || []
@@ -22,7 +22,7 @@ export default function Orders() {
 
   return (
     <React.Fragment>
-      <Title>Current Adapters</Title>
+      <Title>Data table</Title>
       <Table size="small">
         <TableHead>
           <TableRow>
