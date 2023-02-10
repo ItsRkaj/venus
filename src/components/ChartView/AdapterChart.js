@@ -2,7 +2,7 @@ import React, { useState, useEffect, useRef } from "react";
 import Chart from "chart.js/auto";
 import { csv } from "d3";
 
-const Boiler = () => {
+const AdapterChart = (props) => {
   const chartContainer = useRef(null);
 
   const [data, setData] = useState(
@@ -23,18 +23,18 @@ const Boiler = () => {
         labels: data
           .filter(
             (d) =>
-              d.entity_id === "sensor.energysocket_3c39e72e2972_active_power"
+              d.entity_id === props.name
           )
           .filter((d) => d.last_updated !== "")
           .map((d) => d.last_updated),
         datasets: [
           {
-            label: "sensor.energysocket_3c39e72e2972_active_power",
+            label: props.name,
             data: data
               .filter(
                 (d) =>
                   d.entity_id ===
-                  "sensor.energysocket_3c39e72e2972_active_power"
+                  props.name
               )
               .filter((d) => d.state !== "")
               .map((d) => d.state),
@@ -58,4 +58,4 @@ const Boiler = () => {
   return <canvas ref={chartContainer} />;
 };
 
-export default Boiler;
+export default AdapterChart;
