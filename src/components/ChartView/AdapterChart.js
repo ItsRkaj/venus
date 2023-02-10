@@ -18,24 +18,17 @@ const AdapterChart = (props) => {
 
   useEffect(() => {
     const chart = new Chart(chartContainer.current, {
-      type: "line",
+      type: "bar",
       data: {
         labels: data
-          .filter(
-            (d) =>
-              d.entity_id === props.name
-          )
+          .filter((d) => d.entity_id === props.name)
           .filter((d) => d.last_updated !== "")
           .map((d) => d.last_updated),
         datasets: [
           {
             label: props.name,
             data: data
-              .filter(
-                (d) =>
-                  d.entity_id ===
-                  props.name
-              )
+              .filter((d) => d.entity_id === props.name)
               .filter((d) => d.state !== "")
               .map((d) => d.state),
             borderWidth: 1,
@@ -53,7 +46,7 @@ const AdapterChart = (props) => {
     return () => {
       chart.destroy();
     };
-  }, [data]);
+  }, [data, props.name]);
 
   return <canvas ref={chartContainer} />;
 };
