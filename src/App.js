@@ -13,9 +13,10 @@ function App() {
         <Navbar />
         <div className="content">
           <Routes>
-            <Route path="/" element={<Day />}></Route>
-            <Route path="/" element={<Week />}></Route>
-            <Route path="/" element={<Month />}></Route>
+            <Route path="/" element={<div>Homepage</div>}></Route>
+            <Route path="/home" element={<Day />}></Route>
+            <Route path="/adapters" element={<Week />}></Route>
+            <Route path="/table" element={<Month />}></Route>
             <Route path="*" element={<div>404 Page Not Found</div>} />
           </Routes>
         </div>
