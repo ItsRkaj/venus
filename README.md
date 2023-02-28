@@ -39,10 +39,6 @@ Venus is still in progress. `Alpha v1.0` will be out soon.
 ## Credits
 List of contriubutors:
 - [Rikard Johansson](https://github.com/ItsRkaj)
-- [Noel Tesfalidet](https://github.com/NoelMT)
-- [Pim Erlandsson](https://github.com/pimerlandsson)
-- [Arvid Holm](https://github.com/arvhol)
-- [Samson Emblad](https://github.com/samsonsin)
 
 ## License
 TBA
