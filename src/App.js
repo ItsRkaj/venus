@@ -1,12 +1,10 @@
 import "./App.css";
-import React from "react";
+import React, { lazy, Suspense } from "react";
 import Navbar from "./components/Navbar";
-import HomeView from "./components/Views/HomeView"
-import TableView from "./components/Views/TableView";
-import AdapterView from "./components/Views/AdapterView";
-import ChartView from "./components/Views/ChartView";
+import CircularProgress from "@mui/material/CircularProgress";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
+const HomeView = lazy(() => import("./components/Views/HomeView"));
 
 function App() {
   return (
@@ -14,13 +12,12 @@ function App() {
       <div className="App">
         <Navbar />
         <div className="content">
-          <Routes>
-            <Route path="/" element={<HomeView />}></Route>
-            <Route path="/charts" element={<ChartView />}></Route>
-            <Route path="/adapters" element={<AdapterView />}></Route>
-            <Route path="/table" element={<TableView />}></Route>
-            <Route path="*" element={<div>404 Page Not Found</div>} />
-          </Routes>
+          <Suspense fallback={<CircularProgress />}>
+            <Routes>
+              <Route path="/" element={<HomeView />} />
+              <Route path="*" element={<div>404</div>} />
+            </Routes>
+          </Suspense>
         </div>
       </div>
     </BrowserRouter>
@@ -28,3 +25,4 @@ function App() {
 }
 
 export default App;
+
