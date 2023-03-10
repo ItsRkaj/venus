@@ -127,7 +127,7 @@ function HomeViewContent() {
             </Grid>
           </Container>
           <Paper
-            sx={{ position: "fixed", bottom: 0, left: 0, right: 0 }}
+            sx={{ position: "fixed", bottom: 0, left: 0, right: 0, zIndex: 99}}
             elevation={3}
           >
             <BottomNavigation
@@ -136,7 +136,6 @@ function HomeViewContent() {
               onChange={(event, newValue) => {
                 setValue(newValue);
               }}
-              sx={{ zIndex: 99 }}
             >
               <BottomNavigationAction
                 onClick={() => setShowComponent("Day")}
