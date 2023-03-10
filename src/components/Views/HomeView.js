@@ -30,6 +30,21 @@ const names = [
   { name: "Shelly Plug S 12 TV Screen" },
   { name: "Shelly Plug S 13 Dishwasher" },
   { name: "Shelly plug E 14 Dishwasher" },
+  { name: "sensor.shellyem3_3494547566b9_channel_a_power" },
+  { name: "sensor.shellyem3_3494547566b9_channel_a_energy" },
+  { name: "sensor.shellyem3_3494547566b9_channel_a_current" },
+  { name: "sensor.shellyem3_3494547566b9_channel_a_voltage" },
+  { name: "sensor.shellyem3_3494547566b9_channel_a_power_factor" },
+  { name: "sensor.shellyem3_3494547566b9_channel_b_power" },
+  { name: "sensor.shellyem3_3494547566b9_channel_b_energy" },
+  { name: "sensor.shellyem3_3494547566b9_channel_b_current" },
+  { name: "sensor.shellyem3_3494547566b9_channel_b_voltage" },
+  { name: "sensor.shellyem3_3494547566b9_channel_b_power_factor" },
+  { name: "sensor.shellyem3_3494547566b9_channel_c_power" },
+  { name: "sensor.shellyem3_3494547566b9_channel_c_energy" },
+  { name: "sensor.shellyem3_3494547566b9_channel_c_current" },
+  { name: "sensor.shellyem3_3494547566b9_channel_c_voltage" },
+  { name: "sensor.shellyem3_3494547566b9_channel_c_power_factor" },
 ];
 
 function HomeViewContent() {
@@ -77,7 +92,9 @@ function HomeViewContent() {
                     flexDirection: "column",
                   }}
                 >
-                  {showComponent === "Day" ? <AdapterChart name={"Total"} data={data1} /> : null}
+                  {showComponent === "Day" ? (
+                    <AdapterChart name={"Total"} data={data1} />
+                  ) : null}
                   {showComponent === "Week" ? <AdapterChart /> : null}
                   {showComponent === "Month" ? <AdapterChart /> : null}
                   {showComponent === "All" ? <AdapterChart /> : null}
@@ -119,6 +136,7 @@ function HomeViewContent() {
               onChange={(event, newValue) => {
                 setValue(newValue);
               }}
+              sx={{ zIndex: 99 }}
             >
               <BottomNavigationAction
                 onClick={() => setShowComponent("Day")}
